@@ -7,9 +7,9 @@ class PlacesController < ApplicationController
   end
 
   def show
-# find a Company
+# find a Place
 params["id"]
-@places = Place.find_by({"id" => params["id"]})
+@place = Place.find_by({"id" => params["id"]})
 # render places/show view with details about Place
   end
 
@@ -19,15 +19,14 @@ params["id"]
 
   def create 
 #   # start with a new Place
-@places = Place.new
+@place = Place.new
 #   # assign user-entered form data to Place's columns
-@places["name"] = params["name"]
+@place["name"] = params["name"]
 
 #   # save Place row
-@places.save
+@place.save
 #   # redirect user
   redirect_to "/places"
-
 
   end
 
