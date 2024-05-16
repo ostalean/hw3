@@ -2,13 +2,8 @@
  
 <ul>
 <% for place in @places %>
-
-</ul>
-<ul>
-
-
-  <p>
-    <a href="">New Place</a>
-  </p>
-  
+<li>
+  <a href="/places/<%=places["id"]%>"> <%= places["name"] %> </a>
+</li>
+<% end %>
 </ul>
