@@ -2,12 +2,18 @@
   <%= @place["name"]%>
   </h1>
   
-  <h3>Entries</h3>
-  
-  
+  <h3>Activities</h3>
+
+<ul>
+<% @entries = Entry.where({"place_id" => @entry["id"]}) %>
+  <% for entry in @entries %>
+
+  <li><%= entry["title"]%></li>
+  <% end %>
+</ul>
   
   <p>
-    <a href="">New Entry</a>
+    <a href="/entries/new">New Entry</a>
   </p>
   
   <p>
