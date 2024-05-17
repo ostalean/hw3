@@ -6,10 +6,13 @@
 
 <ul>
   <% for entry in @entries %>
-    <li>
- <%= entry["title"]%> 
-    
-    </li>
+  <div style="margin-bottom: 20px;">
+ <h5 style="margin: 0;"><%= entry["title"]%> </h5>
+ <p style="margin: 0; font-style: italic;"> <%= entry["posted_on"]%> </p>
+ <p style="margin-top: 5px"> <%= entry["description"]%> </p> 
+ </div>
+
+   
   <% end %>
 </ul>
   
