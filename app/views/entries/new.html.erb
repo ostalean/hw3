@@ -9,13 +9,13 @@
     <input type="text" name="description" id="description">
   </p>
   <p>
-    <label for="posted date">Date</label>
-    <input type="date" name="posted date" id="posted_on">
+    <label for="posted_on">Date</label>
+    <input type="date" name="posted_on" id="posted_on">
   
   </p>
   <p>
-    <label for="place_id">Place</label>
-    <input type="text" name="company_id" value="<%= @place["id"] %>">
+    <label for="place_id"></label>
+    <input type="hidden" name="place_id" value="<%= @place["id"] %>">
   </p>
   <button>Submit</button>
 </form>
