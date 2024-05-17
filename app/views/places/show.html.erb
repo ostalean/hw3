@@ -5,17 +5,23 @@
   <h3>Activities</h3>
 
 <ul>
-<% @entries = Entry.where({"place_id" => @entry["id"]}) %>
   <% for entry in @entries %>
-
-  <li><%= entry["title"]%></li>
+    <li>
+ <%= entry["title"]%> 
+    
+    </li>
   <% end %>
 </ul>
   
-  <p>
-    <a href="/entries/new">New Entry</a>
-  </p>
+ <p>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">New Activity</a>
+</p>
+
   
   <p>
     <a href="/places">Back to All Places</a>
   </p>
+
+
+
+ 

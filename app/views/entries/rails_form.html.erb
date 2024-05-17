@@ -1,0 +1,13 @@
+<%= form_with :model => @entry do |form| %>
+  <p>
+    <%= form.label "title", "Entry title" %>
+    <%= form.text_field "title" %>
+  </p>
+  <p>
+    <%= form.label "description" %>
+    <%= form.text_field "description" %>
+    <%= form.label "posted_on" %>
+    <%= form.text_field "posted_on" %>
+  </p>
+  <%= form.submit %>
+<% end %>
